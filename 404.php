@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>404</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<link rel="icon" href="http://mckeeb.com//favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://mckeeb.com//favicon.ico" type="image/x-icon">
+</HEAD>
+<BODY BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<TABLE width=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD><IMG SRC="http://mckeeb.com/images/McKeeB_01.gif" WIDTH=80 HEIGHT=44 ALT=""></TD>
+		<TD align="center"><IMG SRC="http://mckeeb.com/images/McKeeB_02.gif" WIDTH=392 HEIGHT=44 ALT=""></TD>
+		<TD><IMG SRC="http://mckeeb.com/images/McKeeB_03.gif" WIDTH=76 HEIGHT=44 ALT=""></TD>
+	</TR>
+</TABLE>
+<p></p>
+<p>
+The file you are looking for cannot be found.</p>
+<p></p>
+<p></p>
+<p></p>
+Copyright &copy; <?php include "date_copy.php" ?>
+</BODY>
+</HTML>
+<XMP style="display:none">
