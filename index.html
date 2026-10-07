@@ -1,43 +1,169 @@
-<HTML>
-<HEAD>
-<TITLE>McKeeB.com</TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-</HEAD>
-<BODY BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
-<TABLE width=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
-	<TR>
-		<TD><IMG SRC="images/McKeeB_01.gif" WIDTH=80 HEIGHT=44 ALT=""></TD>
-		<TD align="center"><IMG SRC="images/McKeeB_02.gif" WIDTH=392 HEIGHT=44 ALT=""></TD>
-		<TD><IMG SRC="images/McKeeB_03.gif" WIDTH=76 HEIGHT=44 ALT=""></TD>
-	</TR>
-</TABLE>
-<p></p>
-<p align="center">
-Welcome to McKeeB.com!
-Someday I might actually do something with this site.<P></P>
-<p></p>
-<p></p>
-<p align="center">Check out my blog <a href="http://blog.mckeeb.com">HERE!</a></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<div align="center">Copyright 2020 McKeeB</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-3909680-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
-</BODY>
-</HTML>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a0c0f">
+  <meta name="description" content="Brian McKee — KD9ADR. Amateur radio, Parks on the Air, the outdoors, and whatever comes next.">
+  <meta property="og:title" content="Brian McKee · KD9ADR">
+  <meta property="og:description" content="Amateur radio, Parks on the Air, the outdoors, and whatever comes next.">
+  <meta property="og:type" content="website">
+  <title>Brian McKee · KD9ADR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="mckeeb.com home">
+      <span class="brand-mark">M</span>
+      <span>mckeeb<span class="dim">.com</span></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#radio">Radio</a>
+      <a href="#about">About</a>
+      <a href="#elsewhere">Elsewhere</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-orbit" aria-hidden="true">
+        <span class="orbit orbit-a"></span>
+        <span class="orbit orbit-b"></span>
+        <span class="orbit-dot"></span>
+        <span class="cross cross-a"></span>
+        <span class="cross cross-b"></span>
+      </div>
+      <div class="eyebrow"><span class="live-dot"></span> KD9ADR · amateur radio</div>
+      <h1>Brian<br><em>McKee.</em></h1>
+      <p class="lede">A small corner of the internet for radio, the outdoors, and whatever I happen to be interested in next.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#radio">See the radio side <span>↓</span></a>
+        <a class="button ghost" href="https://www.qrz.com/db/KD9ADR" target="_blank" rel="noopener">QRZ profile <span>↗</span></a>
+      </div>
+      <div class="scroll-note"><span></span> scroll to explore</div>
+    </section>
+
+    <section id="radio" class="section radio-section">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">01 / Amateur radio</span>
+          <h2>Radio gets<br><em>me outside.</em></h2>
+        </div>
+        <p>Parks on the Air is the sweet spot: portable radio, public lands, a little problem-solving, and a reason to go somewhere.</p>
+      </div>
+
+      <div class="pota-panel">
+        <div class="panel-top">
+          <div>
+            <span class="mono-label">POTA / KD9ADR</span>
+            <h3>Activator stats</h3>
+          </div>
+          <span class="live-pill"><i></i> public data</span>
+        </div>
+        <div class="stats" id="pota-stats">
+          <div class="stat"><span class="stat-value loading">—</span><span class="stat-label">Activations</span></div>
+          <div class="stat"><span class="stat-value loading">—</span><span class="stat-label">Parks</span></div>
+          <div class="stat"><span class="stat-value loading">—</span><span class="stat-label">QSOs</span></div>
+          <div class="stat"><span class="stat-value loading">—</span><span class="stat-label">Achievements</span></div>
+        </div>
+        <p class="data-note" id="pota-status">Connecting to POTA…</p>
+      </div>
+
+      <div class="radio-cards">
+        <article class="radio-card large">
+          <div class="card-number">A</div>
+          <div>
+            <span class="mono-label">Parks on the Air</span>
+            <h3>Take the station outside.</h3>
+            <p>Portable amateur radio from parks and public lands. The gear matters, but getting out the door matters more.</p>
+            <a href="https://pota.app/" target="_blank" rel="noopener">Open POTA <span>↗</span></a>
+          </div>
+          <div class="signal-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+
+        <article class="radio-card">
+          <div class="card-number">B</div>
+          <span class="mono-label">CALLSIGN</span>
+          <h3>KD9ADR</h3>
+          <p>My operating identity on the air. QRZ has the public station profile and award history.</p>
+          <a href="https://www.qrz.com/db/KD9ADR" target="_blank" rel="noopener">View QRZ <span>↗</span></a>
+        </article>
+
+        <article class="radio-card">
+          <div class="card-number">C</div>
+          <span class="mono-label">THE POINT</span>
+          <h3>Less desk. More field.</h3>
+          <p>POTA turns a hobby into an excuse to explore. That's a pretty good trade.</p>
+        </article>
+      </div>
+
+      <div class="awards">
+        <div class="mini-heading">
+          <div><span class="kicker">QRZ / public profile</span><h3>A few things checked off.</h3></div>
+          <span class="verified">6 awards · 2025</span>
+        </div>
+        <div class="award-list">
+          <div><strong>30 Years of QRZ</strong><span>#55125</span></div>
+          <div><strong>World Radio Friendship</strong><span>#89171</span></div>
+          <div><strong>United States Counties</strong><span>#50352</span></div>
+          <div><strong>Grid Squared</strong><span>#79714</span></div>
+          <div><strong>World Continents</strong><span>#76568</span></div>
+          <div><strong>United States</strong><span>#30576</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">02 / The rest of it</span>
+          <h2>Not really<br><em>a résumé.</em></h2>
+        </div>
+        <p>The internet already has enough pages that look like résumés. This one is more useful as a front door.</p>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-copy">
+          <p>I own this little piece of the web, so I figured it should actually say something.</p>
+          <p>For now, that something is radio, getting outside, and leaving room for whatever catches my attention next.</p>
+        </div>
+        <aside class="now-card">
+          <span class="mono-label">RIGHT NOW</span>
+          <div class="now-marker"><span></span><span></span><span></span></div>
+          <h3>Radio<br>· outdoors<br>· curiosity</h3>
+          <p>A deliberately low-maintenance “now” page. It can change when there's something worth changing.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="elsewhere" class="section elsewhere-section">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">03 / Elsewhere</span>
+          <h2>Follow the<br><em>signal.</em></h2>
+        </div>
+        <p>No inbox here. Just the public places that make sense for KD9ADR.</p>
+      </div>
+
+      <div class="link-grid">
+        <a class="link-card" href="https://www.qrz.com/db/KD9ADR" target="_blank" rel="noopener">
+          <span><small>CALLSIGN</small>QRZ</span><b>↗</b>
+        </a>
+        <a class="link-card" href="https://pota.app/" target="_blank" rel="noopener">
+          <span><small>PORTABLE RADIO</small>Parks on the Air</span><b>↗</b>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Brian McKee</span>
+    <span class="mono">KD9ADR · mckeeb.com</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
