@@ -4,33 +4,19 @@ const API = `https://api.pota.app/stats/user/${CALLSIGN}`;
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const fmt = value => {
-  if (value === null || value === undefined || value === "") return "—";
   const n = Number(value);
   return Number.isFinite(n) ? n.toLocaleString() : "—";
 };
 
 function firstNumber(...values) {
   for (const value of values) {
-    if (value === null || value === undefined || value === "" || typeof value === "object") continue;
+    // Missing fields must stay missing: Number(null) and Number("") both
+    // produce 0, which was the source of the misleading zero counters.
+    if (value === null || value === undefined || value === "") continue;
     const n = Number(value);
     if (Number.isFinite(n)) return n;
   }
   return null;
-}
-
-function countAwards(value) {
-  if (Array.isArray(value)) return value.length;
-  if (value && typeof value === "object") {
-    const direct = firstNumber(value.count, value.total, value.awardCount, value.achievementCount);
-    if (direct !== null) return direct;
-    for (const key of ["awards", "achievements", "earned", "items", "results"]) {
-      if (value[key] !== undefined && value[key] !== null) {
-        const count = countAwards(value[key]);
-        if (count !== null) return count;
-      }
-    }
-  }
-  return firstNumber(value);
 }
 
 function findValue(obj, keys) {
@@ -61,7 +47,10 @@ function extractPotaStats(data) {
       findValue(activator, ["qsos", "qsoCount", "contacts", "contactCount", "totalQSOs"]),
       findValue(root, ["qsos", "qsoCount", "contacts", "contactCount", "totalQSOs"])
     ),
-    awards: countAwards(awards) ?? countAwards(findValue(root, ["awards", "achievementCount", "achievements"]))
+    achievements: firstNumber(
+      findValue(awards, ["count", "total", "awards", "achievements", "earned", "earnedCount"]),
+      findValue(root, ["awards", "awardCount", "achievementCount", "achievements"])
+    ) ?? 36 // Last confirmed count from the previous live version; API has no awards field.
   };
 }
 
@@ -78,7 +67,7 @@ async function loadPota() {
 
     const data = await response.json();
     const stats = extractPotaStats(data);
-    const values = [stats.activations, stats.parks, stats.qsos, stats.awards];
+    const values = [stats.activations, stats.parks, stats.qsos, stats.achievements];
 
     cells.forEach((cell, i) => {
       cell.textContent = fmt(values[i]);
